@@ -7,60 +7,79 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #111827);
+      background: linear-gradient(135deg, #0f172a, #0b1120);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #e5e7eb;
+      color: #e2e8f0;
     }
 
     .container {
-      background: #1f2937;
-      padding: 50px;
-      border-radius: 16px;
-      width: 600px;
+      background: #111827;
+      padding: 60px;
+      border-radius: 18px;
+      width: 650px;
       text-align: center;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1s ease-in-out;
+      border: 1px solid #1f2937;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      margin-bottom: 15px;
-      font-size: 28px;
-      color: #ffffff;
+      font-size: 30px;
+      margin-bottom: 10px;
       font-weight: 600;
+      color: #ffffff;
     }
 
-    p {
-      color: #9ca3af;
+    .subtitle {
+      color: #94a3b8;
       font-size: 15px;
       margin-bottom: 30px;
     }
 
     .status {
-      background: #0ea5e9;
-      color: #ffffff;
-      padding: 12px 25px;
+      background: #2563eb;
+      color: white;
+      padding: 12px 28px;
       border-radius: 30px;
       display: inline-block;
-      font-weight: 500;
       font-size: 14px;
       margin-bottom: 30px;
+      letter-spacing: 0.5px;
     }
 
     .info-box {
-      background: #111827;
-      padding: 20px;
-      border-radius: 10px;
+      background: #0b1220;
+      padding: 25px;
+      border-radius: 12px;
       font-size: 14px;
       color: #cbd5e1;
-      border: 1px solid #374151;
+      border: 1px solid #1e293b;
+      margin-bottom: 30px;
+    }
+
+    .dev {
+      font-size: 14px;
+      color: #60a5fa;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      font-size: 12px;
+      color: #64748b;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 12px;
-      color: #6b7280;
+      color: #475569;
     }
   </style>
 </head>
@@ -68,21 +87,35 @@
 
   <div class="container">
     <h1>Despliegue Automático Exitoso</h1>
-    <p>Aplicación desplegada automáticamente mediante integración continua.</p>
+    <div class="subtitle">
+      Pipeline de Integración y Despliegue Continuo funcionando correctamente.
+    </div>
 
     <div class="status">
-      CI/CD Activo y Operativo
+      CI/CD ACTIVO
     </div>
 
     <div class="info-box">
-      Cada actualización en la rama principal ejecuta el pipeline de construcción
-      y despliegue de forma automática.
+      Cada actualización en la rama principal activa automáticamente el proceso
+      de construcción y despliegue del proyecto.
     </div>
 
+    <div class="dev">
+      Desarrollado por: <strong>Gerald Pascual</strong> | DevOps Engineer
+    </div>
+
+    <div class="date" id="date"></div>
+
     <div class="footer">
-      Deploy realizado con GitHub Actions y Surge
+      Deploy automatizado con GitHub Actions y Surge
     </div>
   </div>
+
+  <script>
+    const today = new Date();
+    document.getElementById("date").innerText =
+      "Último despliegue: " + today.toLocaleDateString() + " " + today.toLocaleTimeString();
+  </script>
 
 </body>
 </html>
