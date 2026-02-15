@@ -2,10 +2,87 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Parcial DevOps</title>
+  <title>CI/CD Deployment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #111827);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #e5e7eb;
+    }
+
+    .container {
+      background: #1f2937;
+      padding: 50px;
+      border-radius: 16px;
+      width: 600px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 28px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .status {
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .info-box {
+      background: #111827;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #cbd5e1;
+      border: 1px solid #374151;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola Mundo 🚀</h1>
-  <p>Despliegue automático con GitHub Actions y Surge.sh</p>
+
+  <div class="container">
+    <h1>Despliegue Automático Exitoso</h1>
+    <p>Aplicación desplegada automáticamente mediante integración continua.</p>
+
+    <div class="status">
+      CI/CD Activo y Operativo
+    </div>
+
+    <div class="info-box">
+      Cada actualización en la rama principal ejecuta el pipeline de construcción
+      y despliegue de forma automática.
+    </div>
+
+    <div class="footer">
+      Deploy realizado con GitHub Actions y Surge
+    </div>
+  </div>
+
 </body>
 </html>
